@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 import { io } from "socket.io-client";
-
+const backendUrl = imort.meta.env.VITE_API_URL
 const ChatContext = createContext({});
 
 export const useChat = () => useContext(ChatContext);
@@ -18,7 +18,7 @@ const ChatProvider = ({ children }) => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:5000");
+    socketRef.current = io(`${backendUrl}`);
 
     socketRef.current.on("receive-message", (message) => {
       setMessages((prev) => [...prev, message]);
@@ -37,7 +37,7 @@ const ChatProvider = ({ children }) => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/room/${roomCode}/messages`
+        `${backendUrl}/room/${roomCode}/messages`
       );
       const data = await res.json();
       if (data.success) {
