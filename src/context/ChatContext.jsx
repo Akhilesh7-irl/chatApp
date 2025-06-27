@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 import { io } from "socket.io-client";
-const backendUrl = imort.meta.env.VITE_API_URL
+const backendUrl = import.meta.env.VITE_API_URL
 const ChatContext = createContext({});
 
 export const useChat = () => useContext(ChatContext);
