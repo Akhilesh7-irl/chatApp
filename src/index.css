@@ -1,0 +1,170 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #1e1b2f; /* Dark Purple */
+  color: #e0e0e0;           /* Light Text */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Container */
+.join-form {
+  background-color: #2a2440;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input */
+.join-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background: #1e1b2f;
+  border: 1px solid #6e57e0;
+  border-radius: 8px;
+  color: #e0e0e0;
+}
+
+.join-form input::placeholder {
+  color: #999;
+}
+
+.join-form input:focus {
+  border-color: #00ff9d;
+  outline: none;
+}
+
+/* Button */
+.join-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00ff9d;
+  color: #1e1b2f;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.join-form button:hover {
+  background-color: #00e68a;
+}
+
+.join-form h2{
+  padding-bottom: 25px;
+}
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;       /* full viewport height */
+  width: 75vw;        /* full viewport width */
+  background-color: #1e1b2f;
+  color: #e0e0e0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.roominfo {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2a2440; /* same container bg as login form */
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #2a2440;  /* match login form background */
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #38385a; /* keep subtle purple */
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 70%;
+}
+
+.message.own {
+  background-color: #00ff9d; /* neon green highlight like button */
+  color: #1e1b2f; /* dark text on bright bg */
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.text {
+  margin-top: 4px;
+  word-wrap: break-word;
+}
+
+.no-messages {
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.message-input {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #1e1b2f; /* same dark bg as login input */
+  color: #e0e0e0;
+  border: 1px solid #6e57e0; /* subtle purple border as login inputs */
+}
+
+.message-input input::placeholder {
+  color: #999;
+}
+
+.message-input input:focus {
+  border-color: #00ff9d; /* neon green focus like login */
+}
+
+.message-input button {
+  padding: 10px 20px;
+  background-color: #00ff9d; /* neon green button like login */
+  color: #1e1b2f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.message-input button:hover {
+  background-color: #00e68a; /* slightly darker green hover */
+}
